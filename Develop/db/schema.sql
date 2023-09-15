@@ -33,7 +33,7 @@ CREATE TABLE product (
 );
 
 -- CREATE ProductTag relationship TABLE
-CREATE TABLE ProductTag (
+CREATE TABLE Product_Tag (
     id INT NOT NULL AUTO_INCREMENT,
     product_id INT,
     tag_id INT,
