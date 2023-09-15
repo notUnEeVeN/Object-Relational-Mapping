@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//get tags by ID 
 router.get('/:id', async (req, res) => {
   try {
     const tag = await Tag.findByPk(req.params.id, {
@@ -39,6 +40,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//post tag functionality
 router.post('/', async (req, res) => {
   try {
     const tag = await Tag.create(req.body);
@@ -49,6 +51,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//put/update tag functionality
 router.put('/:id', async (req, res) => {
   try {
     const updatedTag = await Tag.update(req.body, {
@@ -69,6 +72,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+//delete tag functionality
 router.delete('/:id', async (req, res) => {
   try {
     const tag = await Tag.destroy({
